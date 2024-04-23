@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: electoral-otter-dotnet-basic
+  janus-idp.io/tekton: electoral-otter-dotnet-basic
+  backstage.io/kubernetes-id: electoral-otter-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: electoral-otter-dotnet-basic
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
